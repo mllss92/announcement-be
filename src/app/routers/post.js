@@ -13,6 +13,7 @@ module.exports = () => {
   route.get('/get-similars:id', postController.getSimilarPosts);
   route.patch('/edit', passport.authenticate('jwt', { session: false }), postController.editPost);
   route.post('/delete', passport.authenticate('jwt', { session: false }), postController.deletePost);
+  route.get('/test', postController.test);
 
   return route;
 }

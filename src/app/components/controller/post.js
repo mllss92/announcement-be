@@ -95,6 +95,14 @@ const deletePost = async (req, res) => {
   }
 };
 
+const test = async (req, res) => {
+  try {
+    res.status(200).json('Working!')
+  } catch (error) {
+    return res.status(500).json({ message: 'Something went wrong. Please try again later' });
+  }
+}
+
 module.exports = {
   createPost,
   getAllPosts,
@@ -103,4 +111,5 @@ module.exports = {
   editPost,
   deletePost,
   getSimilarPosts,
+  test
 }
